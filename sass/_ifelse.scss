@@ -1,0 +1,21 @@
+
+@mixin bigBox($boxStyle){
+    @if $boxStyle == dark {
+        background-color: #000;
+        color: #fff;
+    } 
+    @if $boxStyle == light {
+        background-color: #ddd;
+        color: #000;
+    }
+}
+
+.myClass{
+    @include boxStyle;
+    @include bigBox(dark);
+}
+
+.myClass2{
+    @include boxStyle;
+    @include bigBox(light);
+}

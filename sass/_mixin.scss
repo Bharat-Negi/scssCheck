@@ -1,0 +1,14 @@
+@mixin boxStyle{
+    width: 200px;
+    margin: 100px;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+@mixin customeColor($color: red, $color2) {
+    background-color: $color;
+    padding: 0.5rem 0.5rem;
+    border: solid 1px #000;
+    cursor: pointer;
+    color: $color2;
+}

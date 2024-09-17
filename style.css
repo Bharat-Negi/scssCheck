@@ -1,0 +1,108 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+.box-100 {
+  width: 100px;
+  background-color: #ff8da1;
+}
+
+.box-200 {
+  width: 200px;
+  background-color: #ff5a77;
+}
+
+.box-300 {
+  width: 300px;
+  background-color: #ff274d;
+}
+
+.box-400 {
+  width: 400px;
+  background-color: #f3002a;
+}
+
+.desktop {
+  width: desktop;
+  font-size: 50px;
+}
+
+.tablet {
+  width: tablet;
+  font-size: 25px;
+}
+
+.mobile {
+  width: mobile;
+  font-size: 10px;
+}
+
+.box-100 {
+  width: 100px;
+  background-color: #ff8da1;
+}
+
+.box-200 {
+  width: 200px;
+  background-color: #ff5a77;
+}
+
+.box-300 {
+  width: 300px;
+  background-color: #ff274d;
+}
+
+.box-400 {
+  width: 400px;
+  background-color: #f3002a;
+}
+
+.myClass {
+  width: 200px;
+  margin: 100px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+.myClass2 {
+  width: 200px;
+  margin: 100px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: #ddd;
+  color: #000;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+img.card-img-top {
+  max-height: 250px;
+}
+
+.card-body .card-title {
+  color: red;
+}
+.card-body .card-text {
+  color: #00f;
+}
+.card-body button {
+  background-color: transparent;
+  padding: 0.5rem 0.5rem;
+  border: solid 1px #000;
+  cursor: pointer;
+  color: green;
+}
+.card-body button:nth-child(2) {
+  background-color: white;
+  padding: 0.5rem 0.5rem;
+  border: solid 1px #000;
+  cursor: pointer;
+  color: blue;
+}
+
+.list-group li:hover {
+  background-color: #f00;
+}/*# sourceMappingURL=style.css.map */

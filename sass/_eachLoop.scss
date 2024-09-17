@@ -1,0 +1,16 @@
+// $devices: desktop, tablet, mobile;
+
+// @each $device in $devices {
+//   .#{$device} {
+//     width: #{$device};
+//   }
+// }
+
+$devices: (desktop: 50px, tablet: 25px, mobile: 10px);
+
+@each $device, $font-size in $devices {
+    .#{$device} {
+      width: #{$device};
+      font-size: $font-size;
+    }
+}
