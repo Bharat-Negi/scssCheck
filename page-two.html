@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* remove extra space in span tab */
+        body{
+            font-size: 0;
+        }
+
+        span{
+            border: solid 1px red;
+            font-size: 16px;
+            margin: 10px;
+        } 
+        span.active{
+            background-color: red;
+        }
+
+        span:is(:hover) ~ span.active{
+            background-color: yellow;
+        }
+        /* span:is(:hover) + span.active{
+            background-color: yellow;
+        } */
+
+        .wrapArea{
+            width: 400px;
+            height: 400px;
+            border: solid 1px green;
+            margin-top: 20px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            float: left;
+        }
+        .wrapArea img{
+            max-width: 100%;
+            max-height: none;
+        }
+        .wrapArea img:nth-child(1){
+            grid-column: 1/2;       
+        }
+        .wrapArea img:last-child{
+            grid-column: 1/2;       
+        }
+
+
+        .wrapAreaDiv{
+            width: 400px;
+            height: 400px;
+            border: solid 1px green;
+            margin-top: 20px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            float: left;
+            margin-left: 10px;
+        }
+        .wrapAreaDiv > div{
+            border: solid 1px red;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapAreaDiv > div:nth-child(1){
+            grid-row: 1/2;
+        }
+        .wrapAreaDiv > div:nth-child(2){
+            grid-column: 2 / 4;
+            grid-row: 1/2;
+        }
+        .wrapAreaDiv > div:nth-child(3){
+            
+        }
+        .wrapAreaDiv > div:last-child{
+            grid-column: 2 / 4;
+            grid-row: 2/2;       
+        }
+
+    </style>
+
+</head>
+<body>    
+    <span>This is Hello</span>
+    <span>This is Hello</span>
+    <span class="active">This is Hello</span>
+    <span>This is Hello</span>
+    <span>This is Hello</span>
+
+
+    <div class="wrapArea">
+        <img src="images/login-img.png" alt="">
+        <img src="images/login-img.png" alt="">
+        <img src="images/login-img.png" alt="">
+        <img src="images/login-img.png" alt="">
+        <img src="images/login-img.png" alt="">
+    </div>
+
+    <div class="wrapAreaDiv">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
