@@ -23,9 +23,9 @@
         span:is(:hover) ~ span.active{
             background-color: yellow;
         }
-        /* span:is(:hover) + span.active{
+        span:hover ~ span:has(.active) {
             background-color: yellow;
-        } */
+        }
 
         .wrapArea{
             width: 400px;

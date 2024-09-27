@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown with Checkboxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            border: 1px solid #ccc;
+            z-index: 1;
+        }
+
+        .dropdown-content label {
+            display: block;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .dropdown-content label:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">Select Options</button>
+        <div class="dropdown-content" id="myDropdown">
+            <label><input type="checkbox" value="Option 1"> Option 1</label>
+            <label><input type="checkbox" value="Option 2"> Option 2</label>
+            <label><input type="checkbox" value="Option 3"> Option 3</label>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownBtn = document.querySelector('.dropbtn');
+            const dropdownContent = document.getElementById('myDropdown');
+
+            // Toggle dropdown on button click
+            dropdownBtn.addEventListener('click', function (event) {
+                dropdownContent.classList.toggle('show');
+                event.stopPropagation(); // Prevent click event from bubbling up
+            });
+
+            // Close dropdown if clicked outside of it
+            window.addEventListener('click', function (event) {
+                if (!dropdownContent.contains(event.target) && !dropdownBtn.contains(event.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
